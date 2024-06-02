@@ -41,12 +41,11 @@ export const BestSellers = () => {
             <div className="cards">
                 {
                     products.map((product) => {
-                        debugger
                         return (
                             <div className="card">
-                                <img src={products[0].image} alt="img" />
-                                <h4>{products[0].title}</h4>
-                                <p className="price">${products[0].price}</p>
+                                <img src={product.image} alt="img" />
+                                <h4>{product.title}</h4>
+                                <p className="price">${product.price}</p>
                                 <button>Show more</button>
                             </div>
                         )
