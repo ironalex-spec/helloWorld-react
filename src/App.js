@@ -2,12 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 import { Header } from './header';
 import { BestSellers } from './BestSellers';
+import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <BestSellers />,
+    }
+  ]);
+
   return (
     <div className="appContainer">
-      <Header/>
-      <BestSellers/>
+      <Header />
+      <hr className="divider" />
+      <RouterProvider router={router} />
     </div>
   );
 }
