@@ -41,6 +41,7 @@ export const BestSellers = () => {
             <div className="cards">
                 {
                     products.map((product) => {
+                        debugger
                         return (
                             <div className="card">
                                 <img src={products[0].image} alt="img" />
@@ -51,7 +52,7 @@ export const BestSellers = () => {
                         )
                     })
                 }
-                
+
             </div>
         </div>
     )
