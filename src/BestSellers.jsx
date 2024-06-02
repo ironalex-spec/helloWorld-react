@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const BestSellers = () => {
     const [products, setProducts] = useState([])
@@ -25,7 +26,7 @@ export const BestSellers = () => {
                                 <img src={product.image} alt="img" />
                                 <h4>{product.title}</h4>
                                 <p className="price">${product.price}</p>
-                                <button>Show more</button>
+                                <Link to={'/product'}>Show more</Link>
                             </div>
                         )
                     })
