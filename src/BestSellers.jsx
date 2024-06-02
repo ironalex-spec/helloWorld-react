@@ -38,17 +38,17 @@ export const BestSellers = () => {
     return (
         <div>
             <div className="card">
-            <img src={products[0].image} alt="img" />
-            <h4>{products[0].title}</h4>
-            <p className="price">${products[0].price}</p>
-            <button>Show more</button>
-        </div>
-        <div className="card">
-            <img src={products[0].image} alt="img" />
-            <h4>{products[0].title}</h4>
-            <p className="price">${products[0].price}</p>
-            <button>Show more</button>
-        </div>
+                <img src={products[0].image} alt="img" />
+                <h4>{products[0].title}</h4>
+                <p className="price">${products[0].price}</p>
+                <button>Show more</button>
+            </div>
+            <div className="card">
+                <img src={products[0].image} alt="img" />
+                <h4>{products[0].title}</h4>
+                <p className="price">${products[0].price}</p>
+                <button>Show more</button>
+            </div>
         </div>
     )
 }
