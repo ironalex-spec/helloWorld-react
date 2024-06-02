@@ -3,13 +3,18 @@ import './App.css';
 import { Header } from './header';
 import { BestSellers } from './BestSellers';
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import { Product } from './Product';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <BestSellers />,
-    }
+    },
+    {
+        path: "product",
+        element: <Product/>,
+    },
   ]);
 
   return (
