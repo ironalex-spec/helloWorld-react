@@ -346,3 +346,20 @@
   text-align: center;
   text-decoration: none;
 }
+
+.arrowBack button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0D0C0B;
+  text-decoration: none;
+  display: block;
+  margin: 36px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.arrowBack button:hover {
+  color: #2068F8;
+}

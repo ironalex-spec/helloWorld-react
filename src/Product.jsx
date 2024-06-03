@@ -2,12 +2,15 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import rating from "./assets/img/rating.svg"
 import cartWhite from "./assets/img/cartWhite.svg"
-import { useParams } from "react-router-dom"
+import arrow from "./assets/img/arrowBack.svg"
+import { useNavigate, useParams } from "react-router-dom"
 
 export const Product = () => {
     const [product, setProduct] = useState(null)
 
     let { productId } = useParams(); // Such Parameters Use set in Routing 
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(`https://masterclass.kimitsu.it-incubator.io/api/products/${productId}`)
@@ -18,9 +21,18 @@ export const Product = () => {
             })
     }, [])
 
+    const toPreviousPageHandler  = () => {
+        navigate('/')
+    }
+
     return (
         <div>
-            <div>Заглушка. Понадобится чуть позже. Не удаляейте :)</div>
+            <div className="arrowBack">
+                <button onClick={toPreviousPageHandler}>
+                    <img src={arrow} alt="" />
+                    Back to Best Seller
+                </button>
+            </div>
 
             {
                 product === null ? ("Loading.....") :
