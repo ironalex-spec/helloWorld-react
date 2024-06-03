@@ -26,7 +26,7 @@ export const BestSellers = () => {
                                 <img src={product.image} alt="img" />
                                 <h4>{product.title}</h4>
                                 <p className="price">${product.price}</p>
-                                <Link to={'/product'}>Show more</Link>
+                                <Link to={`/product/${product.id}`}>Show more</Link>
                             </div>
                         )
                     })

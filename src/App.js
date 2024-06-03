@@ -12,7 +12,7 @@ function App() {
       element: <BestSellers />,
     },
     {
-        path: "product",
+        path: "product/:productId",
         element: <Product/>,
     },
   ]);
